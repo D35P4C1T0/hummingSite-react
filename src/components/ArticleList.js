@@ -5,27 +5,46 @@ import axios from "axios"
 const { REACT_APP_JSONBinURI, REACT_APP_JSONBinAPIKEY } = process.env
 
 export class ArticleList extends Component {
-  getArticles() {
-    axios
+  constructor() {
+    super()
+    this.state = { articles: [] }
+  }
+
+  async componentDidMount() {
+    await axios
       .get(REACT_APP_JSONBinURI + "/latest", {
         headers: { "secret-key": REACT_APP_JSONBinAPIKEY },
       })
-      .then((respone) => {
-        let articleList = respone.data.articles
+      .then((response) => {
+        const articleList = response.data.articles.reverse()
         articleList.forEach((article) => {
-          console.log(article)
-          return (
+          const card = (
             <Materialcard
               content={article.content}
               title={article.title}
               id={article.id}
             />
           )
+          this.state.articles.push(card)
+          this.forceUpdate()
         })
+      })
+      .catch((error) => {
+        console.log(error)
       })
   }
 
   render() {
-    return <div>{this.getArticles()}</div>
+    const articles = this.state.articles
+    if (articles.length === 0) {
+      return null
+    }
+    return (
+      <div>
+        {articles.map((article) => {
+          return article
+        })}
+      </div>
+    )
   }
 }

@@ -39,9 +39,7 @@ export default class Writer extends Component {
       })
       .then((response) => {
         let articlesList = response.data.articles
-
         console.log("Lista articoli:", articlesList)
-
         articlesList.push(article)
         axios
           .put(
