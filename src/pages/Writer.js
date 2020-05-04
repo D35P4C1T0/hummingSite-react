@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import axios from "axios"
-require("dotenv").config()
 
 /*  Ok, I'm being serious here. WHY THE FUCK DO YOU PUT 
     THE FUCKING DOLLAR SIGN ($) IN YOUR FUCKING SHITTY API
@@ -35,17 +34,25 @@ export default class Writer extends Component {
       id: new Date().getTime(),
     }
     axios
-      .get(REACT_APP_JSONBinURI, {
+      .get(REACT_APP_JSONBinURI + "/latest", {
         headers: { "secret-key": REACT_APP_JSONBinAPIKEY },
       })
       .then((response) => {
         let articlesList = response.data.articles
+
+        console.log("Lista articoli:", articlesList)
+
         articlesList.push(article)
         axios
           .put(
             REACT_APP_JSONBinURI,
             { articles: articlesList },
-            { headers: { "secret-key": REACT_APP_JSONBinAPIKEY } }
+            {
+              headers: {
+                "Content-Type": "application/json",
+                "secret-key": REACT_APP_JSONBinAPIKEY,
+              },
+            }
           )
           .then(() => {
             alert("articolo mandato")

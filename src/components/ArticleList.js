@@ -7,7 +7,7 @@ const { REACT_APP_JSONBinURI, REACT_APP_JSONBinAPIKEY } = process.env
 export class ArticleList extends Component {
   getArticles() {
     axios
-      .get(REACT_APP_JSONBinURI, {
+      .get(REACT_APP_JSONBinURI + "/latest", {
         headers: { "secret-key": REACT_APP_JSONBinAPIKEY },
       })
       .then((respone) => {
