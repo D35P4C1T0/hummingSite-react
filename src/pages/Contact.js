@@ -1,19 +1,18 @@
-import React from "react"
+import React from "react";
 export const Contact = () => (
   <div>
-    <h2>It's bevia.ml, but on React, and with a brand new name!</h2>
+    <h2>It's potafi.ga, but on React, and with a brand new name!</h2>
     <br></br>
 
     <p>
-      So why did I want rewrite my whole website? I simply felt that with all
-      the knowledge I accumulated during these months of forced quarantine I
-      simply could not just settle with a static HTML with a ton of shitty
-      styling without even caring about CSS. I mean, for real, check the old
-      site, it's on my{" "}
+      So why did I want to rewrite my whole "website"? I simply felt that with
+      all the knowledge I gained during these months of forced quarantine I
+      couldn't settle with a static HTML with a ton of shitty styling, without
+      even caring about CSS. I mean, for real, check the old website, it's on my{" "}
       <a href="https://github.com/D35P4C1T0/hummingSite">GitHub</a>. Back in
-      December 2019 I had no experience with frontends and web design
+      December 2019 I had no experience with frontends and web-design
       whatsoever, and I still have a long learning-path to follow. I hope this
-      site is eye-candy enough for you. And now, the New Order.{" "}
+      site is eye-candy enough for you to browse. And now, the New Order.{" "}
     </p>
 
     <br></br>
@@ -32,4 +31,4 @@ export const Contact = () => (
       <br></br>Just how I should feel today<br></br> <br></br>
     </cite>
   </div>
-)
+);

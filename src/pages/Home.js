@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 // import { motion } from 'framer-motion'
 // import { articles } from "../articles/Homearticles"
-import { ArticleList } from "../components/ArticleList"
-import { Dragemoji } from "../components/Dragemoji"
+import { ArticleList } from "../components/ArticleList";
+import { Dragemoji } from "../components/Dragemoji";
 // import { Materialcard } from "../components/Materialcard"
 
 export const Home = () => {
@@ -23,11 +23,12 @@ export const Home = () => {
       </div>
       <br></br>
       <ArticleList />
+      <br></br>
 
       {/* {articles.map((article) => {
         const { title, content, id } = article
         return <Materialcard content={content} title={title} key={id} />
       })}{" "} */}
     </div>
-  )
-}
+  );
+};

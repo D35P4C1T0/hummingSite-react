@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import { Materialcard } from "./Materialcard"
-import axios from "axios"
+import React, { Component } from "react";
+import { CoolCard } from "./CoolCard";
+import axios from "axios";
 
-const { REACT_APP_JSONBinURI, REACT_APP_JSONBinAPIKEY } = process.env
+const { REACT_APP_JSONBinURI, REACT_APP_JSONBinAPIKEY } = process.env;
 
 export class ArticleList extends Component {
   constructor() {
-    super()
-    this.state = { articles: [] }
+    super();
+    this.state = { articles: [] };
   }
 
   async componentDidMount() {
@@ -16,35 +16,29 @@ export class ArticleList extends Component {
         headers: { "secret-key": REACT_APP_JSONBinAPIKEY },
       })
       .then((response) => {
-        const articleList = response.data.articles.reverse()
+        const articleList = response.data.articles.reverse();
         articleList.forEach((article) => {
-          const card = (
-            <Materialcard
-              content={article.content}
-              title={article.title}
-              id={article.id}
-            />
-          )
-          this.state.articles.push(card)
-          this.forceUpdate()
-        })
+          const card = <CoolCard {...article}/>;
+          this.state.articles.push(card);
+          this.forceUpdate();
+        });
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   render() {
-    const articles = this.state.articles
+    const articles = this.state.articles;
     if (articles.length === 0) {
-      return null
+      return null;
     }
     return (
-      <div>
+      <section class="card-list">
         {articles.map((article) => {
-          return article
+          return article;
         })}
-      </div>
-    )
+      </section>
+    );
   }
 }
