@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body {
   padding: 0;
   margin: 0;
   background-color: #343a40;
   color: white;
-  font-family: "DM Mono", monospace;
+  font-family: 'Varela Round', sans-serif;
 }
 
 a:hover {
