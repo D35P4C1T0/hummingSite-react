@@ -14,7 +14,7 @@ export const CoolCard = (props) => {
         <h2>{props.content}</h2>
       </header>
 
-      <div class="card-author">
+      {/* <div class="card-author">
         <a class="author-avatar" href="/">
           <img src="https://api.adorable.io/avatars/172/3.png" alt="" />
         </a>
@@ -26,7 +26,12 @@ export const CoolCard = (props) => {
           <div class="author-name-prefix">User</div>
           {props.author ? props.author : "Anon"}
         </div>
-      </div>
+      </div> */}
+      {/* <div class="tags">
+        <a href="/">html</a>
+        <a href="/">css</a>
+        <a href="/">web-dev</a>
+      </div> */}
     </article>
   );
 };

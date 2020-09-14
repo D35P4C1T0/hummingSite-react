@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 body {
   padding: 0;
   margin: 0;
   background-color: #343a40;
   color: white;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 a:hover {
@@ -31,16 +31,16 @@ a:hover {
 }
 
 .card-list::-webkit-scrollbar-thumb {
-  background: #4B515D;
+  background: #4b515d;
 }
 
 .card {
   height: 350px;
-  width: 500px;
+  width: 400px;
   min-width: 300px;
   padding: 1.5rem;
   border-radius: 16px;
-  background: #041B21;
+  background: #041b21;
   /* box-shadow: -1rem 0 1rem rgb(41, 41, 41); */
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@ a:hover {
 
 .card:focus-within ~ .card,
 .card:hover ~ .card {
-  transform: translateX(130px);
+  transform: translateX(120px);
 }
 
 .card:hover {
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .card:not(:first-child) {
-  margin-left: -130px;
+  margin-left: -120px;
 }
 
 .card-header {
@@ -85,7 +85,7 @@ a:hover {
 }
 
 .card-header h2:hover {
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background: linear-gradient(90deg, #ff8a00, #925217);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -166,7 +166,7 @@ a:hover {
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-box-decoration-break: clone;
+  /* -webkit-box-decoration-break: clone; */
   background-clip: text;
   border-color: white;
 }
