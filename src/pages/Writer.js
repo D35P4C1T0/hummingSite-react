@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Container from 'react-bootstrap/Container'
 import axios from "axios"
 
 /*  Ok, I'm being serious here. WHY THE FUCK DO YOU PUT 
@@ -67,26 +68,28 @@ export default class Writer extends Component {
 
   render() {
     return (
-      <form className="border border-light p-5" onSubmit={this.handleSubmit}>
-        <p className="h4 mb-4 text-left">Submit an article</p>
-        <input
-          type="text"
-          id="formTitle"
-          className="form-control mb-4"
-          placeholder="Title"
-          onChange={this.handleTitleChange}
-        />
-        <textarea
-          type="text"
-          id="formContent"
-          className="form-control mb-4"
-          onChange={this.handleContentChange}
-          placeholder="Content"
-        />
-        <button className="btn btn-info btn-block my-4" type="submit">
-          Send
-        </button>
-      </form>
-    )
+      <Container>
+        <form className="border border-light p-5" onSubmit={this.handleSubmit}>
+          <p className="h4 mb-4 text-left">Submit an article</p>
+          <input
+            type="text"
+            id="formTitle"
+            className="form-control mb-4"
+            placeholder="Title"
+            onChange={this.handleTitleChange}
+          />
+          <textarea
+            type="text"
+            id="formContent"
+            className="form-control mb-4"
+            onChange={this.handleContentChange}
+            placeholder="Content"
+          />
+          <button className="btn btn-info btn-block my-4" type="submit">
+            Send
+          </button>
+        </form>
+      </Container>
+    );
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 export const Contact = () => (
-  <div>
+  <Container>
     <h2>It's potafi.ga, but on React, and with a brand new name!</h2>
     <br></br>
 
@@ -30,5 +31,5 @@ export const Contact = () => (
       To say what I need to say<br></br> But, I'm quite sure that you'll tell me
       <br></br>Just how I should feel today<br></br> <br></br>
     </cite>
-  </div>
+  </Container>
 );
