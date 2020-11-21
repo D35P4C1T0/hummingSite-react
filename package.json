@@ -22,7 +22,6 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.2",
-    "react-native": "^0.62.2",
     "react-native-web": "^0.12.2",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
